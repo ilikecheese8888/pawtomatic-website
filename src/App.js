@@ -1,34 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
+import Home from './pages/home.js';
+import AppPage from './pages/app_page.js';
+import Project from './pages/project.js';
+import NotFound from './pages/404.js';
+
 import Navbar from './components/navbar.js';
-import NavPages from './components/navbar.js';
+import {NavPages} from './components/navbar.js';
 
 function App() {
   return (
-    <div className="home">
-      <Navbar />
-      <div className="container">
-        <div className="row align-items-center my-5">
-          <div className="col-lg-7">
-            <img
-              className="img-fluid rounded mb-4 mb-lg-0"
-              src="https://dogstodaymagazine.co.uk/wp-content/uploads/2016/05/placeholder-image-707x500.png"
-              alt="placeholder"
-            />
-          </div>
-          <div className="col-lg-5">
-            <h1 className="font-weight-light">Home Page or Something</h1>
-            <h2 className="font-weight-light">What?</h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
-          </div>
-        </div>
+    <Router>
+      <div className="home">
+        <Navbar activePage={NavPages.HOME}/>
+
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/project">
+            <Project />
+          </Route>
+          <Route path="/app">
+            <AppPage />
+          </Route>
+          <Route path="/">
+            <NotFound />
+          </Route>
+        </Switch>
       </div>
-    </div>
+    </Router>
   );
 }
 
