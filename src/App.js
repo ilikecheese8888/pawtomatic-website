@@ -1,9 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/navbar.js';
+import NavPages from './components/navbar.js';
 
 function App() {
   return (
     <div className="home">
+      <Navbar />
       <div className="container">
         <div className="row align-items-center my-5">
           <div className="col-lg-7">
@@ -15,6 +18,7 @@ function App() {
           </div>
           <div className="col-lg-5">
             <h1 className="font-weight-light">Home Page or Something</h1>
+            <h2 className="font-weight-light">What?</h2>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
