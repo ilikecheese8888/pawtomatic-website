@@ -1,5 +1,5 @@
 import '../App.css';
-import logo from '../assets/pawtomatic_icon_transparent.png';
+import android_app from '../assets/android_app.jpg';
 
 function AppPage(){
   return(
@@ -7,13 +7,16 @@ function AppPage(){
       <div className="row align-items-center my-5">
         <div className="col-lg-7">
           <img
-            className="img-fluid rounded mb-4 mb-lg-0"
-            src={logo}
-            alt="placeholder"
+            className="img-fluid rounded mb-4 mb-lg-0 app-img"
+            src={android_app}
+            alt="Pawtomatic Pet Door Android App"
           />
         </div>
         <div className="col-lg-5">
           <h1 className="font-weight-light">Welcome to the Pawtomatic Web App</h1>
+          <p>
+            The picture on the left is the Android app. The web app will not look like this.
+          </p>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text

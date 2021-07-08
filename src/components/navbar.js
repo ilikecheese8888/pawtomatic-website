@@ -1,6 +1,6 @@
 import '../App.css';
 import logo from '../assets/pawtomatic_icon_transparent.png';
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 export const NavPages = {
   HOME: "home",
@@ -11,6 +11,13 @@ export const NavPages = {
 function Navbar(props) {
   const activePage = props.activePage;
   console.log("Active page is: " + activePage);
+  let location = useLocation();
+  let isHome = (location.pathname === "/");
+  let isProject = (location.pathname === "/project");
+  let isApp = (location.pathname === "/app");
+  console.log(location.pathname);
+  console.log(isProject);
+
   return (
       <div className="container-navbar">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,10 +31,10 @@ function Navbar(props) {
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
-              <li className="nav-item active">
+              <li className={`nav-item ${isProject ? "active" : ""}`}>
                 <Link className="nav-link" to="/project">Project</Link>
               </li>
-              <li className="nav-item active">
+              <li className={`nav-item ${isApp ? "active" : ""}`}>
                 <Link className="nav-link" to="/app">App</Link>
               </li>
               {/*
