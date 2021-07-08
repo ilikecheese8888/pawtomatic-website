@@ -2,6 +2,16 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Installing and Running the Web App
+* Install NodeJS and NPM
+* Install ReactJS
+* Clone the Repo
+* In terminal navigate to the top directory of the Repo
+* Run `yarn install` to install the needed node modules
+* Run `firebase login` to login to Firebase
+* Run `yarn start` to open the current decelopment version of the app
+* Run `yarn build` then `firebase deploy` to deploy the new version to `https://pawtomatic.web.app`
+
 ## Available Scripts
 
 In the project directory, you can run:

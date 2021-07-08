@@ -1,5 +1,6 @@
 import '../App.css';
-import logo from '../assets/pawtomatic_icon_transparent.png';
+// import logo from '../assets/pawtomatic_icon_transparent.png';
+import prototype from '../assets/prototype.jpg';
 
 function Project(){
   return(
@@ -8,8 +9,8 @@ function Project(){
         <div className="col-lg-7">
           <img
             className="img-fluid rounded mb-4 mb-lg-0"
-            src={logo}
-            alt="placeholder"
+            src={prototype}
+            alt="Prototype Pawtomatic Pet Door"
           />
         </div>
         <div className="col-lg-5">
