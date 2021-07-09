@@ -20,7 +20,7 @@ function Navbar(props) {
 
   return (
       <div className="container-navbar">
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light nav-bg-dark">
           <Link className="navbar-brand" to="/">
             <img src={logo} height="25" alt="Pawtomatic Logo"/>
             Pawtomatic
