@@ -8,5 +8,10 @@
 }
 
 .app-bg-dark {
-  background-color: 'AliceBlue';
+  background-color: aliceblue;
+}
+
+.light, .navbar-light{
+  background-color: aliceblue;
+  color: navy;
 }
