@@ -22,7 +22,7 @@ function Navbar(props) {
       <div className="container-navbar">
         <nav className="navbar navbar-expand-lg navbar-light nav-bg-dark">
           <Link className="navbar-brand" to="/">
-            <img src={logo} height="25" alt="Pawtomatic Logo"/>
+            <img src={logo} height="25" alt="Pawtomatic Logo!"/>
             Pawtomatic
           </Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
