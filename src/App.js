@@ -2,7 +2,7 @@ import './App.css';
 // import bootstrap from 'bootstrap';
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route
 } from "react-router-dom";
 
@@ -11,30 +11,23 @@ import AppPage from './pages/app_page.js';
 import Project from './pages/project.js';
 import NotFound from './pages/404.js';
 
-import Navbar from './components/navbar.js';
-import {NavPages} from './components/navbar.js';
+import Navigation from './components/navigation.js';
+import {NavPages} from './components/navigation.js';
+import {Container} from "react-bootstrap";
 
 function App() {
   return (
     <Router>
-      <div className="home">
-        <Navbar activePage={NavPages.HOME}/>
+      <Container>
+        <Navigation activePage={NavPages.HOME}/>
 
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/project">
-            <Project />
-          </Route>
-          <Route path="/app">
-            <AppPage />
-          </Route>
-          <Route path="/">
-            <NotFound />
-          </Route>
-        </Switch>
-      </div>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/project" element={<Project />}/>
+          <Route path="/app" element={<AppPage />} />
+          <Route path="/" element={<NotFound />} />
+        </Routes>
+      </Container>
     </Router>
   );
 }
